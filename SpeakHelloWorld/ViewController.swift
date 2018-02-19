@@ -13,13 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textUtterance: UITextView!
     
     @IBAction func playUtterance(_ sender: UIButton) {
-        var speechSynthesizer = AVSpeechSynthesizer()
-        var speechUtterance = AVSpeechUtterance(string: textUtterance.text)
-         speechUtterance.rate = 0.05
-        
-        let l = AVSpeechSynthesisVoice(language: "en-US")
-        speechUtterance.voice = l
-        speechSynthesizer.speak(speechUtterance)
+        Speak(pointer:self)
     }
     
     @IBAction func clearUtterance(_ sender: UIButton) {
